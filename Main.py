@@ -401,8 +401,8 @@ else:
 home_dir = os.getenv("HOME") or os.getenv("USERPROFILE")
 
 # Definisci il percorso del file JAR e del file XML
-jar_path = os.path.join(home_dir, 'PycharmProjects', 'DrugsRepositioning', 'padel', 'PaDEL-Descriptor', 'PaDEL-Descriptor.jar')
-xml_path = os.path.join(home_dir, 'PycharmProjects', 'DrugsRepositioning', 'padel', 'PaDEL-Descriptor', 'PubchemFingerprinter.xml')
+jar_path = os.path.join(home_dir, 'PycharmProjects', 'DrugRepurposing', 'padel', 'PaDEL-Descriptor', 'PaDEL-Descriptor.jar')
+xml_path = os.path.join(home_dir, 'PycharmProjects', 'DrugRepurposing', 'padel', 'PaDEL-Descriptor', 'PubchemFingerprinter.xml')
 
 # Comando per eseguire il file JAR con le opzioni specificate
 command = [
