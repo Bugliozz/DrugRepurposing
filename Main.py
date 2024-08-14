@@ -19,7 +19,7 @@ pd.set_option('display.max_rows', None)
 print("\n")
 
 # 1) RICERCA DEI TARGET
-search_term = 'acetylcholinesterase'
+search_term = 'coronavirus'
 target = new_client.target
 target_query = target.search(search_term)
 targets = pd.DataFrame.from_dict(target_query)
@@ -245,16 +245,16 @@ print(f"Forma delle feature dopo la pulizia: {X.shape}")
 
 # Analisi della varianza delle feature
 variances = X.var()
-low_variance_threshold = 0.16
+low_variance_threshold = 0.1
 selection = VarianceThreshold(threshold=low_variance_threshold)
 X_reduced = selection.fit_transform(X)
 print(f"Numero di caratteristiche dopo la rimozione di quelle a bassa varianza: {X_reduced.shape[1]}")
 
 # Split dei dati in training e test set
-X_train, X_test, Y_train, Y_test = train_test_split(X_reduced, Y, test_size=0.2, random_state=46)
+X_train, X_test, Y_train, Y_test = train_test_split(X_reduced, Y, test_size=0.2, random_state=200)
 
 # Definisci il modello
-model = RandomForestRegressor(random_state=46)
+model = RandomForestRegressor(random_state=200)
 
 # Addestramento del modello
 model.fit(X_train, Y_train)
