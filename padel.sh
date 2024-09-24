@@ -1,2 +1,0 @@
-JAR_PATH="$HOME/PycharmProjects/DrugsRepositioning/padel/PaDEL-Descriptor/PaDEL-Descriptor.jar"
-java -Xms1G -Xmx1G -Djava.awt.headless=true -jar "$JAR_PATH" -removesalt -standardizenitro -fingerprints -descriptortypes "$HOME/PycharmProjects/DrugsRepositioning/padel/PaDEL-Descriptor/PubchemFingerprinter.xml" -dir ./ -file descriptors_output.csv
